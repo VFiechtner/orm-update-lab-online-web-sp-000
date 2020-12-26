@@ -53,7 +53,7 @@ class Student
         self.new_from_db(row)
       end.first
   end
-  
+
   def save
     if self.id
       self.update
@@ -69,8 +69,8 @@ class Student
   end
 
   def update
-    sql = <<-SQL 
-      UPDATE students 
+    sql = <<-SQL
+      UPDATE students
       SET name = ?, grade = ?
       WHERE id = ?
       SQL
